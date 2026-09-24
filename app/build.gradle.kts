@@ -5,6 +5,10 @@ plugins {
 
 android {
     namespace = "com.example.hvstudio"
+
+    buildFeatures {
+        viewBinding = true
+    }
     compileSdk {
         version = release(37)
     }
@@ -51,4 +55,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(platform("com.google.firebase:firebase-bom:33.9.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("androidx.appcompat:appcompat:1.6.1")
 }
